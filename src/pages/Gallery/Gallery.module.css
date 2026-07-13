@@ -1,0 +1,4 @@
+.galleryPage {
+  display: flex;
+  flex-direction: column;
+}

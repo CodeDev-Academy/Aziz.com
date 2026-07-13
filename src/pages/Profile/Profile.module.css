@@ -1,0 +1,297 @@
+.profilePage {
+  min-height: calc(100vh - 100px);
+  background-color: var(--color-cream-light);
+  padding: var(--spacing-xxl) 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xxl);
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-cream);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-cream-light);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+  box-shadow: var(--shadow-sm);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-family: var(--font-headings);
+  font-size: 1.1rem;
+  color: var(--color-brown-dark);
+  margin: 0;
+  font-weight: var(--weight-semibold);
+  word-break: break-word;
+}
+
+.userRole {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.menuItemBtn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-fast);
+}
+
+.menuItemBtn:hover {
+  background-color: var(--color-cream-light);
+  color: var(--color-brown);
+}
+
+.activeMenuItemBtn {
+  background-color: var(--color-cream);
+  color: var(--color-brown-dark);
+}
+
+.menuIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.logoutBtn {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-fast);
+  margin-top: var(--spacing-lg);
+}
+
+.logoutBtn:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.2);
+}
+
+/* Content Area styling */
+.contentArea {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-cream);
+  padding: var(--spacing-xl);
+  min-height: 450px;
+}
+
+.sectionTitle {
+  font-family: var(--font-headings);
+  color: var(--color-brown-dark);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sectionSubtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-cream-light);
+  padding-bottom: var(--spacing-md);
+}
+
+/* Forms formatting */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.formGroup label {
+  font-family: var(--font-headings);
+  font-size: 0.9rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-beige);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-cream-light);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: var(--color-brown);
+  background-color: var(--color-white);
+}
+
+.disabledInput {
+  background-color: #f1f3f4 !important;
+  color: #70757a !important;
+  border-color: #dadce0 !important;
+  cursor: not-allowed;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 576px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.submitBtn {
+  align-self: flex-start;
+  background-color: var(--color-brown);
+  border: 1px solid var(--color-brown);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-headings);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-top: var(--spacing-md);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-brown-dark);
+  border-color: var(--color-brown-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Preferences styling */
+.preferenceCard {
+  background-color: var(--color-cream-light);
+  border: 1px dashed var(--color-tan);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+}
+
+.preferenceCard h3 {
+  margin-top: 0;
+  color: var(--color-brown);
+  font-family: var(--font-headings);
+  font-size: 1.1rem;
+}
+
+.preferenceCard p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Toast Notifications */
+.notification {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-headings);
+  font-weight: var(--weight-medium);
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.successNotification {
+  background-color: #E6F4EA;
+  color: #137333;
+  border-left: 4px solid #137333;
+}
+
+.errorNotification {
+  background-color: #FCE8E6;
+  color: #C5221F;
+  border-left: 4px solid #C5221F;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

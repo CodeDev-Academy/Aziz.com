@@ -1,0 +1,119 @@
+.section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-brown-dark);
+  color: var(--color-cream-light);
+}
+
+.newsletterInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .newsletterInner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+}
+
+.subtitle {
+  color: var(--color-cream);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--color-white);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-tan);
+  box-shadow: 0 0 0 3px rgba(214, 184, 140, 0.25);
+}
+
+.submitBtn {
+  white-space: nowrap;
+}
+
+.errorText {
+  color: var(--color-red);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Success State */
+.successMessage {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-tan);
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-tan);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.successTitle {
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.successText {
+  color: var(--color-cream);
+  font-size: 0.9rem;
+}

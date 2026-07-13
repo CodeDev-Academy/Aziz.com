@@ -1,0 +1,85 @@
+.section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-cream);
+  border-top: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-beige);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-brown-dark);
+  color: var(--color-cream-light);
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-brown-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stepDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 220px;
+}
+
+/* Connector line between steps — visible only on desktop */
+.connector {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 36px);
+    width: calc(100% - 72px);
+    height: 2px;
+    background-color: var(--color-beige);
+  }
+
+  .connector::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-tan);
+    border-top: 2px solid var(--color-tan);
+    transform: rotate(45deg);
+  }
+}

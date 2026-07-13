@@ -1,0 +1,100 @@
+.faqContainer {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(232, 217, 197, 0.25);
+}
+
+.title {
+  font-size: 1.8rem;
+  color: var(--color-brown-dark);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.05rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.faqItem {
+  border: 1px solid var(--color-beige);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  background-color: var(--color-white);
+}
+
+.faqItem:hover {
+  border-color: var(--color-tan);
+}
+
+.faqItem.open {
+  border-color: var(--color-brown);
+  box-shadow: var(--shadow-sm);
+}
+
+.questionBtn {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-brown-dark);
+  transition: all var(--transition-normal);
+}
+
+.questionBtn:hover {
+  background-color: var(--color-cream-light);
+}
+
+.open .questionBtn {
+  background-color: var(--color-cream-light);
+  border-bottom: 1px solid var(--color-beige);
+}
+
+.questionText {
+  font-size: 1.05rem;
+  font-weight: var(--weight-semibold);
+  padding-right: var(--spacing-md);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-tan);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open .icon {
+  transform: rotate(180deg);
+  color: var(--color-brown);
+}
+
+.answerContainer {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answerContent {
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}

@@ -1,0 +1,4 @@
+.servicesPage {
+  display: flex;
+  flex-direction: column;
+}

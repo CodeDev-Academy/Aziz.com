@@ -1,0 +1,61 @@
+.section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-cream-light);
+}
+
+.storiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}
+
+.storyBlock {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .storyBlock {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reversed .imageWrapper {
+    order: 2;
+  }
+
+  .reversed .textContent {
+    order: 1;
+  }
+}
+
+.imageWrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.storyTitle {
+  font-size: 1.5rem;
+  color: var(--color-brown-dark);
+}
+
+.storyText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xxxl) var(--spacing-md);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--color-tan);
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  font-size: 1.75rem;
+  color: var(--color-brown-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.text {
+  margin-bottom: var(--spacing-xl);
+}
