@@ -25,9 +25,13 @@ __pycache__/
 *$py.class
 *.so
 
-# Django database & media (optional)
+# Django database & media
 backend/db.sqlite3
 backend/media/
+
+# Internal agent files & temporary scripts
+Agent.md
+*.ipynb
 
 # Editor & OS files
 .vscode/
