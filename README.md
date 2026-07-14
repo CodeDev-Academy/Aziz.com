@@ -63,11 +63,12 @@ furniture-showroom/
   - Guests are redirected to `/signin`
 - After login or registration, users are automatically redirected to `/profile` (customers) or `/admin` (admins)
 
-### Admin Dashboard
-- **Overview tab**: Database metrics (product count, blog count, gallery count by category) and a database reset utility
-- **Products tab**: Full CRUD — add, edit, and delete furniture catalog items
-- **Blog tab**: Manage showroom articles and design tips
-- **Gallery tab**: Manage completed interior project case studies
+### Admin Dashboard (CMS)
+- **Dark & Warm Premium UI**: Redesigned layout with an intuitive sidebar, visual stat cards, and quick action buttons
+- **Smart Data Tables**: Real-time search filtering, shimmer skeleton loaders for fetching states, and friendly empty states
+- **Live Image Preview Modal**: Add/Edit modals feature real-time image thumbnail previews (with broken URL fallbacks), character counters, and loading spinners
+- **Custom Delete Confirmation**: Replaces native browser alerts with a styled, non-destructive modal overlay
+- **Content Management**: Full CRUD capabilities across Products, Blog Posts, and Gallery Projects
 
 ### Customer Profile Page
 - **Sidebar navigation** with active state indicators
